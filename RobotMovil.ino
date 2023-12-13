@@ -1,8 +1,10 @@
 //Librerias
 #include <LiquidCrystal.h>
 
+//Creacion de objeto LCD con sus conexiones
 LiquidCrystal lcd(12, 11, 5, 4, 13, 7);
 
+//Declaracion de variables
 int izqA = 8;
 int izqB = 6;
 int derA = 9;
@@ -22,7 +24,7 @@ double Speed;
 
 void setup()  {
   
-  lcd.begin(16, 2);     // inicializa a display de 16 columnas y 2 lineas  
+  lcd.begin(16, 2);
 
   pinMode(derA, OUTPUT);
   pinMode(derB, OUTPUT);
@@ -96,8 +98,7 @@ void loop()  {
 
  }
 
-
-
+//Funciones
  void adelante() {
   digitalWrite(izqB, LOW);
   digitalWrite(derA, LOW);
